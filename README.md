@@ -9,23 +9,32 @@ This web application allows users to upload chest X-ray images and receive predi
 - **ResNet Model Information:** A dedicated page that explains the ResNet architecture, its benefits, and how it works, accessible through the footer link.
 - **Interactive Interface:** The prediction result is presented in a visually engaging way, centered within the page for ease of viewing.
 
-## Pre-trained Model
+## Pre-trained Model and Dataset
 
-The application relies on a pre-trained model file (`model.h5`) for making predictions. To obtain this model:
+Due to GitHub's file size limitations, the pre-trained model file (`model.h5`) is not included in this repository. However, you can download it by following these steps:
 
-1. Download the Jupyter notebook "Pneumonia with X-ray images.ipynb" from the repository.
-2. Run the notebook to generate and save the model as `model.h5`.
-3. Place the `model.h5` file in the root directory of the web app folder.
+1. **Download the Pre-trained Model:**
+   - Use the Jupyter notebook `Pneumonia with X-ray images.ipynb` provided in the repository to download the pre-trained model (`model.h5`).
+   - Place the `model.h5` file in the root directory of the web app folder.
 
-## X-ray Dataset
+2. **Download the X-ray Dataset:**
+   - Download the training and testing X-ray images folders from [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
+   - Place the `train` and `test` folders inside the web app folder to display charts.
 
-For displaying dataset statistics (e.g., training and testing data distribution charts), you need to download the X-ray images from Kaggle:
+## Flask API
 
-1. Download the chest X-ray images dataset from [Kaggle](https://www.kaggle.com/datasets/paultimothymooney/chest-xray-pneumonia).
-2. Extract the dataset and place the `train` and `test` folders within the web app folder in their respective directories.
+A Flask API is used in this web app to handle the prediction logic. Flask was chosen because it provides a simple yet powerful way to create APIs that can be easily integrated with other frameworks like Node.js. The Flask API receives the uploaded X-ray image, processes it, and returns the prediction result, which is then displayed in the web app.
 
-## How to Use
+## Running the Web App
 
-1. Place the `model.h5` file in the root directory of the web app folder.
-2. Place the `train` and `test` folders inside the web app folder as instructed.
-3. Run the application, and upload a chest X-ray image to get a prediction.
+To run the web app, follow these steps:
+
+1. **Start the Flask API:**
+   - Navigate to the folder containing the Flask script.
+   - Run the script using `python model_server.py`.
+
+2. **Start the Node.js server:**
+   - Navigate to the folder containing the Node.js script.
+   - Run the server using `node index.js`.
+
+3. **Open your browser and navigate to `http://localhost:4000`.**
