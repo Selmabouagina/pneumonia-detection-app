@@ -9,6 +9,17 @@ This web application allows users to upload chest X-ray images and receive predi
 - **ResNet Model Information:** A dedicated page that explains the ResNet architecture, its benefits, and how it works, accessible through the footer link.
 - **Interactive Interface:** The prediction result is presented in a visually engaging way, centered within the page for ease of viewing.
 
+## Requirements
+
+- **Python**: Version 3.9.13
+- **TensorFlow**: Version 2.11.0
+- **Flask**: Required for the Python API
+- **Node.js**: Required for the server-side application
+- **Additional Node.js packages**:
+  - `express`
+  - `multer`
+  - `axios`
+
 ## Pre-trained Model and Dataset
 
 Due to GitHub's file size limitations, the pre-trained model file (`model.h5`) is not included in this repository. However, you can download it by following these steps:
