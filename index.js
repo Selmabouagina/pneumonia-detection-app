@@ -153,12 +153,12 @@ app.get('/', (req, res) => {
                         font-size: 1.2em;
                     }
 
-                    .result-positive {
+                    .result-negative {
                         background-color: #d4edda;
                         color: #155724;
                     }
 
-                    .result-negative {
+                    .result-positive {
                         background-color: #f8d7da;
                         color: #721c24;
                     }
